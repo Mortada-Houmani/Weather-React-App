@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    
+}
+.weather-app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  min-width: 100vw;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  
+ 
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+button {
+  padding: 12px 24px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover:not(:disabled) {
+  background: #5568d3;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #e74c3c;
+  text-align: center;
+  padding: 10px;
+  background: #fadbd8;
+  border-radius: 8px;
+}
+
+.weather-info {
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.weather-info h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.temperature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.temp {
+  font-size: 64px;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.description {
+  text-align: center;
+  font-size: 24px;
+  color: #666;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.detail-item {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail-item span:first-child {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.detail-item span:last-child {
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+}
